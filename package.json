@@ -10,7 +10,8 @@
     "static": "next build && next export -o docs && touch ./docs/.nojekyll",
     "scripts:fetch-sheet": "tsx --tsconfig ./tsconfig.node.json ./scripts/spreadsheet/fetch-spreadsheet-data.ts",
     "scripts:format-sheet": "tsx --tsconfig ./tsconfig.node.json ./scripts/spreadsheet/format-data.ts",
-    "scripts:sheet-images": "tsx --tsconfig ./tsconfig.node.json ./scripts/spreadsheet/fetch-images.ts"
+    "scripts:sheet-images": "tsx --tsconfig ./tsconfig.node.json ./scripts/spreadsheet/fetch-images.ts",
+    "scripts:sheet-resize": "tsx --tsconfig ./tsconfig.node.json ./scripts/spreadsheet/resize-images.ts"
   },
   "dependencies": {
     "@types/node": "18.16.3",
@@ -30,6 +31,7 @@
     "@types/styled-components": "^5.1.26",
     "@types/styled-system": "^5.1.16",
     "dotenv": "^16.0.3",
+    "sharp": "^0.32.1",
     "tsx": "^3.12.7"
   }
 }

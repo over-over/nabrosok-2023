@@ -5,7 +5,7 @@ import artists from './data/artists.json';
 import works from './data/works.json';
 import { TArtistDetails, TWorkDetails } from '../../src/shared/lib';
 
-const OUTPUT_FOLDER = join(__dirname, '../../public/images');
+const OUTPUT_FOLDER = join(__dirname, '../../public/images-max');
 
 // ORIGINAL
 // https://drive.google.com/file/d/1sPHb15ARQZos-NYQt2k6rbD7aJ9-5cxf/view
