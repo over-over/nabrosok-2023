@@ -27,7 +27,7 @@ const resizeImages = async () => {
     });
     for (const path of images) {
       const newPath = path.replace('images-max', 'images');
-      const sharpResult = await sharp(path)
+      const sharpResult = await sharp(path, { failOn: 'none' })
         .resize(512, 512, { fit: 'cover' })
         .withMetadata()
         .jpeg({ quality: 85 })
