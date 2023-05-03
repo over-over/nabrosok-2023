@@ -1,9 +1,6 @@
 import styled from 'styled-components';
 
-import { TArtistDetails } from '@shared/lib';
 import { Typography } from '@shared/ui/primitives';
-import { Contacts } from '@shared/ui/molecules';
-import { Box } from '@shared/ui';
 
 const Wrapper = styled.main`
   width: 100%;

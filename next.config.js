@@ -1,9 +1,8 @@
+const isProd = process.env.NODE_ENV === 'production';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    appDir: true,
-  },
-  // basePath: isProd ? '/nabrosok-2022' : '',
+  basePath: isProd ? '/nabrosok-2023' : '',
   assetPrefix: '',
   compiler: {
     styledComponents: true,

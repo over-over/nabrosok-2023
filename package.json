@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "scripts:fetch-sheet": "tsx --tsconfig ./tsconfig.node.json ./scripts/spreadsheet/fetch-spreadsheet-data.ts"
+    "scripts:fetch-sheet": "tsx --tsconfig ./tsconfig.node.json ./scripts/spreadsheet/fetch-spreadsheet-data.ts",
+    "scripts:format-sheet": "tsx --tsconfig ./tsconfig.node.json ./scripts/spreadsheet/format-data.ts",
+    "scripts:sheet-images": "tsx --tsconfig ./tsconfig.node.json ./scripts/spreadsheet/fetch-images.ts"
   },
   "dependencies": {
     "@types/node": "18.16.3",

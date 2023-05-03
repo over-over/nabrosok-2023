@@ -56,5 +56,4 @@ export type TArtistDetails = {
   email?: string;
   vk?: string;
   telegram?: string;
-  works: TWorkDetails[];
 };
