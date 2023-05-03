@@ -1,7 +1,7 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 
 const IMAGE_PREFIX =
-  process.env.NODE_ENV === 'production' ? '/nabrosok-2022' : '';
+  process.env.NODE_ENV === 'production' ? '/nabrosok-2023' : '';
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: any) {

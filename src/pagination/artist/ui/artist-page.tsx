@@ -70,7 +70,7 @@ const InfoItem = styled.li`
 `;
 
 const IMAGE_PREFIX =
-  process.env.NODE_ENV === 'production' ? '/nabrosok-2022/' : '';
+  process.env.NODE_ENV === 'production' ? '/nabrosok-2023/' : '';
 
 type Props = {
   artistData: TArtistDetails;
