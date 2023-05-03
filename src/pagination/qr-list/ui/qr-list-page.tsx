@@ -1,9 +1,8 @@
 import styled from 'styled-components';
 import { QRCodeSVG } from 'qrcode.react';
 
-import works from '../../../../data/works.json';
-import artists from '../../../../data/artists.json';
-import artistNames from '../../../../data/artist-qr-names.json';
+import works from '../../../../scripts/spreadsheet/data/works.json';
+import artists from '../../../../scripts/spreadsheet/data/artists.json';
 import { TArtistDetails, TWorkDetails } from '@shared/lib';
 
 const Wrapper = styled.main`
@@ -44,27 +43,18 @@ const InfoText = styled.p`
 
 type Props = {};
 
-// let titleSizes: Record<string, string> = {};
-// const setTitleSizes = (id: string, size: string) => {
-//   titleSizes = { ...titleSizes, [id]: size };
-// };
-
 export const QRListPage = ({}: Props) => {
-  // const [titleSizes, setTitleSizes] = useState<Record<string, string>>({});
-  // const [titleSizes, setTitleSizes] = useState<Record<string, string>>({});
   return (
     <Wrapper>
       {(Object.values(works) as TWorkDetails[]).map(item => {
         const artistDetails = artists[
           item.artistId as keyof typeof artists
         ] as TArtistDetails;
-        const artistName =
-          artistNames[artistDetails.name as keyof typeof artistNames] ??
-          artistDetails.name;
+        const artistName = artistDetails.name;
         return (
           <CodeCard key={item.id}>
             <QRCodeSVG
-              value={`https://over-over.github.io/nabrosok-2022/work/${item.id}`}
+              value={`https://over-over.github.io/nabrosok-2023/work/${item.id}`}
               size={141}
               bgColor={'#ffffff'}
               fgColor={'#000000'}
@@ -73,22 +63,6 @@ export const QRListPage = ({}: Props) => {
             />
             <WorkInfo>
               <Title
-                // ref={ref => {
-                //   const divHeight = ref?.offsetHeight ?? 0;
-                //   const lineHeight = 21;
-                //   const lines = divHeight / lineHeight;
-                //   if (lines > 2 || item.name.length > 40) {
-                //     // setTitleSizes(item.id, '14pt');
-                //     setTitleSizes(values => ({ ...values, [item.id]: '14pt' }));
-                //     return;
-                //   }
-                //   if (lines > 3 || item.name.length > 60) {
-                //     // setTitleSizes(item.id, '12pt');
-                //     setTitleSizes(values => ({ ...values, [item.id]: '12pt' }));
-                //     return;
-                //   }
-                //   console.log('lines:', lines, item.name);
-                // }}
                 style={{
                   fontSize:
                     item.name.length > 70
