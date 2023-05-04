@@ -6,7 +6,7 @@ import { WorkPage } from '@pagination/work';
 
 import works from '../../scripts/spreadsheet/data/works.json';
 import artists from '../../scripts/spreadsheet/data/artists.json';
-// import lots from '../../data/telegram-lots.json';
+import lots from '../../scripts/spreadsheet/data/telegram-lots.json';
 
 type Props = {
   workData: TWorkDetails;
@@ -35,13 +35,13 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const artistData = artists[workData.artistId as keyof typeof artists];
 
   let auctionLink: string | undefined;
-  // const telegramWorkData = lots[id as keyof typeof lots];
+  const telegramWorkData = lots[id as keyof typeof lots];
 
-  // if (telegramWorkData) {
-  //   const data = JSON.parse(telegramWorkData);
-  //   const messageId = data.result.message_id;
-  //   auctionLink = `https://t.me/nabrosok_auction_2022/${messageId}`;
-  // }
+  if (telegramWorkData) {
+    const data = JSON.parse(telegramWorkData);
+    const messageId = data.result.message_id;
+    auctionLink = `https://t.me/nabrosok_auction_2023/${messageId}`;
+  }
 
   return {
     props: {

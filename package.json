@@ -11,6 +11,7 @@
     "scripts:fetch-sheet": "tsx --tsconfig ./tsconfig.node.json ./scripts/spreadsheet/fetch-spreadsheet-data.ts",
     "scripts:format-sheet": "tsx --tsconfig ./tsconfig.node.json ./scripts/spreadsheet/format-data.ts",
     "scripts:sheet-images": "tsx --tsconfig ./tsconfig.node.json ./scripts/spreadsheet/fetch-images.ts",
+    "scripts:auction": "tsx --tsconfig ./tsconfig.node.json ./scripts/spreadsheet/auction-posts.ts",
     "scripts:sheet-resize": "tsx --tsconfig ./tsconfig.node.json ./scripts/spreadsheet/resize-images.ts"
   },
   "dependencies": {
